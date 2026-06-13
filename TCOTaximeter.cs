@@ -15,7 +15,7 @@ using System.Text.RegularExpressions;
 
 namespace Oxide.Plugins
 {
-    [Info("TCOTaximeter", "TCO", "1.0.0")]
+    [Info("TCOTaximeter", "TCO", "1.0.1")]
     [Description("Plugin um Taxifahrten abzurechnen")]
     public class TCOTaximeter : RustPlugin
     {
@@ -267,7 +267,7 @@ namespace Oxide.Plugins
             var player = arg?.Player();
             if (player == null || !arg.HasArgs()) return;
 
-            switch (arg.Args[0])
+            switch (arg.Args[0].ToString())
             {
                 case "priceMinus":
                 {
